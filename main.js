@@ -72,3 +72,29 @@ ScrollReveal().reveal(".about__content .about__btn", {
     ...scrollRevealOption,
     delay: 2000,
 });
+// Голосование
+document.getElementById("voteForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const selected = document.querySelector('input[name="place"]:checked');
+    if (selected) {
+        document.getElementById("voteResult").style.display = "block";
+        this.style.display = "none";
+    }
+});
+
+// Комментарии
+document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("userName").value.trim();
+    const comment = document.getElementById("userComment").value.trim();
+
+    if (name && comment) {
+        const commentDiv = document.createElement("div");
+        commentDiv.classList.add("comment");
+        commentDiv.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+        document.getElementById("commentList").appendChild(commentDiv);
+
+        // Очистка формы
+        this.reset();
+    }
+});

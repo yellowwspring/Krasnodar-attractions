@@ -131,6 +131,34 @@
         </div>
     </div>
 </section>
+<section class="vote-comment-section">
+    <div class="section__container vote__container">
+        <h2 class="section__header">Голосование за любимое место в Краснодаре</h2>
+        <form id="voteForm">
+            <p>Выберите одно место:</p>
+            <label><input type="radio" name="place" value="Парк Краснодар" required> Парк «Краснодар»</label><br>
+            <label><input type="radio" name="place" value="Собор Александра Невского"> Собор Александра Невского</label><br>
+            <label><input type="radio" name="place" value="Городской сад"> Городской сад</label><br>
+            <label><input type="radio" name="place" value="Парк Солнечный остров"> Парк «Солнечный остров»</label><br>
+            <label><input type="radio" name="place" value="Улица Красная"> Улица Красная</label><br>
+            <label><input type="radio" name="place" value="Мост Поцелуев"> Мост Поцелуев</label><br><br>
+            <button type="submit" class="btn">Проголосовать</button>
+        </form>
+        <div id="voteResult" class="vote__result" style="display:none;">
+            <h3 align="center">Спасибо за голос!</h3>
+        </div>
+    </div>
+
+    <div class="section__container comment__container">
+        <h2 class="section__header">Оставьте комментарий</h2>
+        <form id="commentForm">
+            <input type="text" id="userName" placeholder="Ваше имя" required>
+            <textarea id="userComment" placeholder="Ваш комментарий" required></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+        <div id="commentList"></div>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="section__container footer__container">
